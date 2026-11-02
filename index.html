@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bull Terminal - crypto + stock scanner that grades its own picks</title>
+<meta name="description" content="Bull Terminal is a Windows app that scans crypto and US stocks, scores every setup 0-100, gives you a plan with entry, stop and targets - and grades every pick, wins and losses. Join the free waitlist.">
+<meta name="theme-color" content="#050816">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<!-- Share previews. After you connect a domain, change the two "og:url"/"og:image" style addresses to full ones (see README). -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bull Terminal">
+<meta property="og:title" content="Bull Terminal - the scanner that grades its own picks">
+<meta property="og:description" content="Daily crypto + stock picks with a score and a plan, alerts to your phone, and a track record that shows the losses too. Free waitlist.">
+<meta property="og:image" content="https://bull-terminal.github.io/bull-terminal-releases/img/share-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bull Terminal logo with the line: the scanner that grades its own picks">
+<meta property="og:url" content="https://bull-terminal.github.io/bull-terminal-releases/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bull Terminal - the scanner that grades its own picks">
+<meta name="twitter:description" content="Daily crypto + stock picks with a score and a plan, alerts to your phone, and a track record that shows the losses too.">
+<meta name="twitter:image" content="https://bull-terminal.github.io/bull-terminal-releases/img/share-1200x630.jpg">
+
+<link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" aria-label="Bull Terminal - back to top">
+      <img src="img/logo-96.png" width="32" height="32" alt="">
+      <span>Bull Terminal</span>
+    </a>
+    <a class="btn sm" href="#join">Join the waitlist</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1. HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Windows app · crypto + US stocks</p>
+      <h1>The market scanner that <span class="grad">grades its own picks.</span></h1>
+      <p class="lead">Bull Terminal scans hundreds of coins and stocks every day, scores each setup 0-100, hands you a plan with entry, stop and targets - and keeps score of every pick, wins <em>and</em> losses.</p>
+
+      <form class="signup" action="soon.html" method="get" data-waitlist>
+        <label for="email-1">Your email</label>
+        <div class="field-row">
+          <input id="email-1" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Join the free waitlist</button>
+        </div>
+        <input type="hidden" name="ref" value="" data-ref>
+        <input type="hidden" name="source" value="hero">
+        <p class="fine">Free. We only email you about the release - no spam.</p>
+        <p class="msg" role="status" aria-live="polite" data-msg></p>
+      </form>
+    </div>
+
+    <figure class="shot hero-shot">
+      <img src="img/hero-coin-760.webp"
+           srcset="img/hero-coin-760.webp 760w, img/hero-coin-1400.webp 1400w"
+           sizes="(min-width: 960px) 620px, 100vw"
+           width="1400" height="810" fetchpriority="high"
+           alt="Bull Terminal coin page: a candle chart with moving averages and a 30-day forecast cone, a trade plan, and a coin-risk panel listing liquidity and dilution warnings.">
+      <figcaption>Coin page: chart, 30-day odds, risk check and plan. Demo data.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- REFERRAL (shown after sign-up) -->
+<section class="refer" id="refer" hidden aria-labelledby="refer-h" tabindex="-1">
+  <div class="wrap">
+    <div class="card refer-card">
+      <p class="eyebrow ok"><span class="dot" aria-hidden="true"></span> You're on the list</p>
+      <h2 id="refer-h">Move up the list - share your link</h2>
+      <p class="muted">Every friend who joins through your link moves you closer to the front. When the waitlist hits 100, the download goes out to the front of the list first.</p>
+
+      <label class="lbl" for="ref-link">Your link</label>
+      <div class="field-row">
+        <input id="ref-link" type="text" readonly data-ref-link>
+        <button class="btn" type="button" data-copy="ref-link">Copy link</button>
+      </div>
+
+      <div class="posts">
+        <div class="post">
+          <label class="lbl" for="post-x">Post on X</label>
+          <textarea id="post-x" rows="4" readonly data-post="x"></textarea>
+          <button class="btn sec sm" type="button" data-copy="post-x">Copy</button>
+        </div>
+        <div class="post">
+          <label class="lbl" for="post-tt">TikTok bio</label>
+          <textarea id="post-tt" rows="2" readonly data-post="tiktok"></textarea>
+          <button class="btn sec sm" type="button" data-copy="post-tt">Copy</button>
+        </div>
+        <div class="post">
+          <label class="lbl" for="post-dc">Discord</label>
+          <textarea id="post-dc" rows="4" readonly data-post="discord"></textarea>
+          <button class="btn sec sm" type="button" data-copy="post-dc">Copy</button>
+        </div>
+      </div>
+      <p class="fine">Your link carries a short code, never your email.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. WHAT IT DOES -->
+<section class="sec" id="features" aria-labelledby="feat-h">
+  <div class="wrap">
+    <h2 id="feat-h">What it does</h2>
+    <p class="sub">Plain English, no hype. It runs on your PC with free data - no account needed to start.</p>
+    <ul class="cards">
+      <li class="card feat">
+        <span class="ic" aria-hidden="true">01</span>
+        <h3>Daily picks with a score</h3>
+        <p>It scans hundreds of small and mid-cap coins and gives every setup a score from 0 to 100. The Today page shows the market mood in one line and the top 3 setups.</p>
+      </li>
+      <li class="card feat">
+        <span class="ic" aria-hidden="true">02</span>
+        <h3>A plan for every setup</h3>
+        <p>Entry zone, stop and targets, the odds of hitting the target before the stop, and a position sizer for your account size and risk.</p>
+      </li>
+      <li class="card feat">
+        <span class="ic" aria-hidden="true">03</span>
+        <h3>A track record with the losses in it</h3>
+        <p>Every pick is saved before the outcome and graded automatically - against simply holding BTC (or SPY for stocks). No cherry-picking.</p>
+      </li>
+      <li class="card feat">
+        <span class="ic" aria-hidden="true">04</span>
+        <h3>Alerts to your phone</h3>
+        <p>Price, score and plan alerts - even on lines you draw on the chart - sent to Discord or Telegram. Pro adds new strong setups and a morning briefing.</p>
+      </li>
+      <li class="card feat">
+        <span class="ic" aria-hidden="true">05</span>
+        <h3>A screener you build yourself</h3>
+        <p>Filter by RSI, score, odds, market cap, volume, % moves or distance from the 200-day average. Watch the match count as you type and save it by name.</p>
+      </li>
+      <li class="card feat">
+        <span class="ic" aria-hidden="true">06</span>
+        <h3>Crypto and US stocks</h3>
+        <p>Crypto out of the box; US stocks and ETFs with Pro. Every coin gets a risk check first: hard to sell, brand-new, already pumped or heavy dilution.</p>
+      </li>
+    </ul>
+
+    <div class="gallery">
+      <figure class="shot">
+        <img src="img/today-760.webp" srcset="img/today-760.webp 760w, img/today-1400.webp 1400w"
+             sizes="(min-width: 960px) 540px, 100vw" width="1400" height="810" loading="lazy" decoding="async"
+             alt="The Today page: market mood in one line and the top 3 setups, each with an entry zone, a stop and a first target.">
+        <figcaption>Today: the top 3 setups, each with a plan.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="img/discover-760.webp" srcset="img/discover-760.webp 760w, img/discover-1400.webp 1400w"
+             sizes="(min-width: 960px) 540px, 100vw" width="1400" height="810" loading="lazy" decoding="async"
+             alt="The Discover page: coins sorted into Strong setups, Building and Watch columns, with scores, signals and risk badges.">
+        <figcaption>Discover: every setup by score, risky coins flagged.</figcaption>
+      </figure>
+    </div>
+    <p class="fine center">Screenshots show the app with demo data, not real results.</p>
+  </div>
+</section>
+
+<!-- 3. PROOF -->
+<section class="sec proof" id="proof" aria-labelledby="proof-h">
+  <div class="wrap">
+    <h2 id="proof-h">Every pick graded. <span class="up">Wins</span> and <span class="down">losses</span>.</h2>
+    <p class="sub">Most "signal" accounts show you the winners. Bull Terminal is built to show you whether the score actually works - including when it doesn't.</p>
+    <ol class="steps">
+      <li class="card">
+        <b>Logged before the outcome</b>
+        <p>Every pick and forecast is saved the moment the scan makes it, with the score it had at the time - before anyone knows how it turns out.</p>
+      </li>
+      <li class="card">
+        <b>Graded automatically</b>
+        <p>Checked again 7 and 30 days later, with trading costs taken off, and compared with just holding BTC (SPY for stocks). One pick per coin at a time, so nothing is counted twice.</p>
+      </li>
+      <li class="card">
+        <b>Shown in full</b>
+        <p>The track record groups every graded pick by its score - 80+, 60-79, 40-59, under 40 - so you can see if higher scores really did better, plus which signals helped and which didn't.</p>
+      </li>
+    </ol>
+    <p class="note">No profit promises. It's a research tool: odds and history, so <em>you</em> can decide. Markets can go to zero - only risk what you can afford to lose.</p>
+  </div>
+</section>
+
+<!-- 4. FREE VS PRO -->
+<section class="sec" id="plans" aria-labelledby="plans-h">
+  <div class="wrap">
+    <h2 id="plans-h">Free vs Pro</h2>
+    <p class="sub">The Free plan is a real crypto scanner, not a demo. Pro is for people who use it every day. New installs get a 14-day Pro trial.</p>
+    <div class="table-wrap" role="region" aria-labelledby="plans-h" tabindex="0">
+      <table class="plans">
+        <caption class="sr">Free plan compared with Pro</caption>
+        <thead>
+          <tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col" class="pro">Pro</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Crypto scans with 0-100 scores</th><td>Top 15 picks</td><td>Every pick</td></tr>
+          <tr><th scope="row">Trade plans (entry, stop, targets)</th><td>5 followed</td><td>Unlimited</td></tr>
+          <tr><th scope="row">Watchlist</th><td>25 coins</td><td>Unlimited</td></tr>
+          <tr><th scope="row">Alerts in the app</th><td>10</td><td>Unlimited</td></tr>
+          <tr><th scope="row">Phone alerts (Discord / Telegram)</th><td>3 a day</td><td>Unlimited + new strong setups + morning briefing</td></tr>
+          <tr><th scope="row">Live 30-day forecasts for any coin</th><td>2 a day</td><td>Unlimited</td></tr>
+          <tr><th scope="row">Full track record</th><td><span class="yes" aria-label="Included">✓</span></td><td><span class="yes" aria-label="Included">✓</span> + model learning</td></tr>
+          <tr><th scope="row">Screener, chart tools, paper trading, journal, Excel export</th><td><span class="yes" aria-label="Included">✓</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr>
+          <tr><th scope="row">US stocks + ETFs</th><td><span class="no" aria-label="Not included">-</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr>
+          <tr><th scope="row">Background scans (window closed)</th><td><span class="no" aria-label="Not included">-</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr>
+          <tr><th scope="row">Futures funding + open interest</th><td><span class="no" aria-label="Not included">-</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr>
+          <tr><th scope="row">Phone view (read-only, home Wi-Fi)</th><td><span class="no" aria-label="Not included">-</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr>
+          <tr><th scope="row">"Made with Bull Terminal" on shared images</th><td>Shown</td><td>None</td></tr>
+          <tr class="price"><th scope="row">Price</th><td>$0, forever</td><td>$9 / month, or $59 once (early bird)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FAQ -->
+<section class="sec" id="faq" aria-labelledby="faq-h">
+  <div class="wrap narrow">
+    <h2 id="faq-h">Questions</h2>
+    <details>
+      <summary>Is it Windows only?</summary>
+      <p>Yes, for now: Windows 10 and 11. A Mac version is planned for later. Phone alerts go to Discord or Telegram, so they work on any phone.</p>
+    </details>
+    <details>
+      <summary>Is it really free?</summary>
+      <p>Yes. The Free plan is the full crypto scanner and never expires. Pro is optional, and every new install gets a 14-day Pro trial first. Nothing you save is deleted when the trial ends.</p>
+    </details>
+    <details>
+      <summary>Do I need an API key or an account?</summary>
+      <p>No. It starts with free data and no sign-up. A free CoinMarketCap key (about 2 minutes to get) unlocks full scans. Stocks (Pro) need a free Alpaca account.</p>
+    </details>
+    <details>
+      <summary>Does it trade for me or hold my money?</summary>
+      <p>No. It never places orders and never holds money or crypto. Paper trading uses pretend money, and "Trade it" just opens your exchange's own site.</p>
+    </details>
+    <details>
+      <summary>Is this financial advice?</summary>
+      <p>No. Bull Terminal is a scanner and research tool that shows statistics - scores, odds and past results. You make your own decisions.</p>
+    </details>
+    <details>
+      <summary>How are the picks graded?</summary>
+      <p>Each pick is saved when the scan makes it, then checked 7 and 30 days later against holding BTC (or SPY for stocks), with trading costs taken off. Losses stay in the record.</p>
+    </details>
+    <details>
+      <summary>Is my data private?</summary>
+      <p>Everything stays on your PC - your keys, watchlists, plans and trades. The app has no accounts, no tracking and no analytics.</p>
+    </details>
+    <details>
+      <summary>How do updates work?</summary>
+      <p>The app tells you when a new version is out and updates itself with one click. Your settings and data are kept. Updates are signed, so the app only installs real Bull Terminal releases.</p>
+    </details>
+  </div>
+</section>
+
+<!-- 6. SECOND SIGN-UP + DISCORD -->
+<section class="sec join" id="join" aria-labelledby="join-h">
+  <div class="wrap narrow">
+    <div class="card join-card">
+      <img src="img/logo-96.png" width="56" height="56" alt="" class="join-logo">
+      <h2 id="join-h">Get it first</h2>
+      <p class="muted">Join the free waitlist. When it hits 100, the download link goes out - to the front of the list first.</p>
+      <form class="signup" action="soon.html" method="get" data-waitlist>
+        <label for="email-2">Your email</label>
+        <div class="field-row">
+          <input id="email-2" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Join the free waitlist</button>
+        </div>
+        <input type="hidden" name="ref" value="" data-ref>
+        <input type="hidden" name="source" value="bottom">
+        <p class="msg" role="status" aria-live="polite" data-msg></p>
+      </form>
+      <div class="or"><span>or</span></div>
+      <a class="btn discord" href="#join" data-discord>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.6 19.6 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.8 19.8 0 0 0 6 3l1.3-2a12.8 12.8 0 0 1-2-1l.5-.4a14 14 0 0 0 12.2 0l.5.4-2 1 1.3 2a19.7 19.7 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.7ZM8 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
+        <span data-discord-label>Join the Discord</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 7. FOOTER -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p><strong>Not financial advice. Bull Terminal is a research tool.</strong> It shows statistics from past prices and public data; past results don't predict future results. Crypto and small stocks can lose most of their value quickly.</p>
+    <p class="links"><a href="terms.html">Terms of use + privacy</a> · <a href="#faq">FAQ</a> · <a href="#top">Back to top</a></p>
+    <p class="dim">© 2026 Bull Terminal</p>
+  </div>
+</footer>
+</body>
+</html>
