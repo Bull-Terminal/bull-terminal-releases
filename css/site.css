@@ -182,3 +182,9 @@ details p{padding:0 0 18px;color:var(--tx2)}
   .steps{grid-template-columns:repeat(3,1fr)}
   .join-card{padding:48px}
 }
+
+/* launch counter (hidden until WAITLIST_COUNT is set in js/main.js) */
+.count{margin-top:var(--s4);max-width:440px}
+.count p{margin:0 0 var(--s2);font-size:14px;font-weight:600;color:var(--tx2,#c9cde4)}
+.count-track{height:8px;border-radius:99px;background:var(--acc-bg);overflow:hidden}
+.count-track span{display:block;height:100%;width:0;background:var(--brand);border-radius:99px;transition:width .6s ease}

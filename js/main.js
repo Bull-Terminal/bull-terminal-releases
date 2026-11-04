@@ -3,6 +3,11 @@
 const WAITLIST_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScQDoO2mDGrKcNXEl_aw5egiQfIZWJhrzcy0MOfUYrkcQAeEA/formResponse";
 const DISCORD_URL = "https://discord.gg/88fmCavj9e";
 
+/* Launch counter under the first sign-up box: set it to the real number of sign-ups (Google Sheet rows + Whop waitlist),
+   e.g. 47 -> "Launching at 100 sign-ups - we're at 47". null hides it. Never round it up. */
+const WAITLIST_COUNT = null;
+const LAUNCH_AT = 100;
+
 /* Only for a Google Form: the form's "entry.<number>" names for each question (README explains how to find them).
    Leave a name empty to not send that field. Formspree and most other services need nothing here. */
 const GOOGLE_FORM_FIELDS = { email: "entry.1145894272", ref: "entry.1655066740", ref_code: "entry.35413757" };
@@ -134,6 +139,18 @@ const POSTS = {
   // returning visitor who already signed up on this device: show their link again
   const mine = store.get("bt_my_ref");
   if (mine && REF_RX.test(mine)) showReferral(mine, false);
+
+  /* ---------- launch counter ---------- */
+  const cnt = $("[data-count]");
+  if (cnt && Number.isInteger(WAITLIST_COUNT) && WAITLIST_COUNT >= 0) {
+    const n = Math.min(WAITLIST_COUNT, LAUNCH_AT);
+    $("[data-count-text]", cnt).textContent = WAITLIST_COUNT >= LAUNCH_AT
+      ? `We hit ${LAUNCH_AT} - launching now.` : `Launching at ${LAUNCH_AT} sign-ups - we're at ${WAITLIST_COUNT}.`;
+    const bar = $("[data-count-bar]", cnt);
+    bar.style.width = (100 * n / LAUNCH_AT).toFixed(1) + "%";
+    bar.parentElement.setAttribute("aria-valuenow", String(n));
+    cnt.hidden = false;
+  }
 
   /* ---------- Discord button ---------- */
   const dc = $("[data-discord]");
